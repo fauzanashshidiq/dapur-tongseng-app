@@ -26,4 +26,6 @@
 
     <string name="list">List</string>
     <string name="grid">Grid</string>
+    <string name="text_selamat_datang">Selamat Datang di Dapur Tongseng!</string>
+    <string name="text_slogan">Rasa Khas, Bumbu Meresap.</string>
 </resources>
