@@ -12,8 +12,8 @@ class ListMenuAdapter(private val listMenu: ArrayList<Menu>) : RecyclerView.Adap
 
     private lateinit var onItemClickCallback: OnItemClickCallback
 
-    fun setOnItemClickCallback(onItemClickCallback: Any) {
-        this.onItemClickCallback = onItemClickCallback as OnItemClickCallback as OnItemClickCallback
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
@@ -40,8 +40,9 @@ class ListMenuAdapter(private val listMenu: ArrayList<Menu>) : RecyclerView.Adap
             .into(holder.imgPhoto) // imageView mana yang akan diterapkan
         holder.tvName.text = name
         holder.tvDescription.text = description
-        holder.itemView.setOnClickListener { onItemClickCallback.onItemClicked(listMenu[holder.adapterPosition]) }
-
+        holder.itemView.setOnClickListener {
+            onItemClickCallback.onItemClicked(listMenu[holder.absoluteAdapterPosition])
+        }
     }
 
     override fun getItemCount(): Int = listMenu.size

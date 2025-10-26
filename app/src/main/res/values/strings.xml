@@ -6,19 +6,22 @@
     <string name="menu_name">Nama Menu</string>
     <string name="description">Deskripsi</string>
     <string-array name="data_name">
-        <item>Donut</item>
-        <item>Froyo</item>
-        <item>IceCream Sandwich</item>
+        <item>Tongseng Sapi Klasik</item>
+        <item>Tongseng Kambing Spesial</item>
+        <item>Tongseng Ayam Santan</item>
+        <item>Tongseng Telur Puyuh (Vegetarian)</item>
     </string-array>
     <string-array name="data_description">
-        <item>Donuts are glazed and sprinkled with candy.</item>
-        <item>Froyo is premium self-serve frozen yogurt.</item>
-        <item>Ice cream sandwiches have chocolate wafers and vanilla filling.</item>
+        <item>Daging sapi empuk, kuah kental manis-pedas khas.</item>
+        <item>Daging kambing muda, tanpa bau prengus, bumbu meresap.</item>
+        <item>Versi lebih ringan dengan daging ayam, kuah lebih santan.</item>
+        <item>Tongseng dengan telur puyuh, sayuran, dan jamur (opsi non-daging).</item>
     </string-array>
     <string-array name="data_photo">
-        <item>donut_circle.jpg</item>
-        <item>froyo_circle.jpg</item>
-        <item>icecream_circle.jpg</item>
+        <item>tongseng_sapi_klasik.jpg</item>
+        <item>tongseng_kambing_spesial.jpg</item>
+        <item>tongseng_ayam_santan.jpg</item>
+        <item>tongseng_telur_puyuh.jpg</item>
     </string-array>
 
     <string name="list">List</string>
