@@ -4,37 +4,73 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.dapurtongseng.ListMenuAdapter
+import com.example.dapurtongseng.Menu
+import com.example.dapurtongseng.R
 import com.example.dapurtongseng.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
+    private var _binding: FragmentHomeBinding? = null
+    private val binding get() = _binding!!
 
-private var _binding: FragmentHomeBinding? = null
-  // This property is only valid between onCreateView and
-  // onDestroyView.
-  private val binding get() = _binding!!
+    private val list = ArrayList<Menu>()
 
-  override fun onCreateView(
-    inflater: LayoutInflater,
-    container: ViewGroup?,
-    savedInstanceState: Bundle?
-  ): View {
-    val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
-    _binding = FragmentHomeBinding.inflate(inflater, container, false)
-    val root: View = binding.root
-
-    val textView: TextView = binding.textHome
-    homeViewModel.text.observe(viewLifecycleOwner) {
-      textView.text = it
+        list.addAll(getListMenu())
     }
-    return root
-  }
 
-override fun onDestroyView() {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val rvMenu: RecyclerView = binding.rvMenu
+        rvMenu.setHasFixedSize(true)
+
+        showRecyclerList(rvMenu)
+    }
+
+    private fun getListMenu(): ArrayList<Menu> {
+        val dataName = resources.getStringArray(R.array.data_name)
+        val dataDescription = resources.getStringArray(R.array.data_description)
+        val dataPhoto = resources.getStringArray(R.array.data_photo)
+        val listMenu = ArrayList<Menu>()
+        for (i in dataName.indices) {
+            val menu = Menu(dataName[i], dataDescription[i], dataPhoto[i])
+            listMenu.add(menu)
+        }
+        return listMenu
+    }
+
+    private fun showRecyclerList(rvMenu: RecyclerView) {
+        rvMenu.layoutManager = LinearLayoutManager(context)
+        val listMenuAdapter = ListMenuAdapter(list)
+        rvMenu.adapter = listMenuAdapter
+
+        listMenuAdapter.setOnItemClickCallback(object : ListMenuAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: Menu) {
+                showSelectedMenu(data)
+            }
+        })
+    }
+
+    private fun showSelectedMenu(menu: Menu) {
+        Toast.makeText(requireContext(), "Kamu memilih " + menu.name, Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }

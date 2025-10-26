@@ -3,4 +3,24 @@
     <string name="title_home">Home</string>
     <string name="title_order">Order</string>
     <string name="title_profile">Profile</string>
+    <string name="menu_name">Nama Menu</string>
+    <string name="description">Deskripsi</string>
+    <string-array name="data_name">
+        <item>Donut</item>
+        <item>Froyo</item>
+        <item>IceCream Sandwich</item>
+    </string-array>
+    <string-array name="data_description">
+        <item>Donuts are glazed and sprinkled with candy.</item>
+        <item>Froyo is premium self-serve frozen yogurt.</item>
+        <item>Ice cream sandwiches have chocolate wafers and vanilla filling.</item>
+    </string-array>
+    <string-array name="data_photo">
+        <item>donut_circle.jpg</item>
+        <item>froyo_circle.jpg</item>
+        <item>icecream_circle.jpg</item>
+    </string-array>
+
+    <string name="list">List</string>
+    <string name="grid">Grid</string>
 </resources>
