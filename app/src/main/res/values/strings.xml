@@ -32,4 +32,7 @@
     <string name="desc_persuasive"><![CDATA[Segera cicipi kehangatan kuah khas Dapur Tongseng dan pesan menu favorit Anda!]]></string>
     <string name="register">Daftar</string>
     <string name="login">Masuk</string>
+    <string name="fullname">Nama Lengkap</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
 </resources>
