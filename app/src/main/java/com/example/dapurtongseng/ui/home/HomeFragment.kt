@@ -1,5 +1,6 @@
 package com.example.dapurtongseng.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dapurtongseng.ListMenuAdapter
 import com.example.dapurtongseng.Menu
+import com.example.dapurtongseng.OrderActivity
 import com.example.dapurtongseng.R
 import com.example.dapurtongseng.databinding.FragmentHomeBinding
 
@@ -76,8 +78,14 @@ class HomeFragment : Fragment() {
     }
 
     private fun showSelectedMenu(menu: Menu) {
-        Toast.makeText(requireContext(), "Kamu memilih " + menu.name, Toast.LENGTH_SHORT).show()
+        val intent = Intent(requireContext(), OrderActivity::class.java)
+        intent.putExtra("FULL_NAME", arguments?.getString("FULL_NAME"))
+        intent.putExtra("MENU_NAME", menu.name)
+        intent.putExtra("MENU_DESC", menu.description)
+        intent.putExtra("MENU_PHOTO", menu.photo)
+        startActivity(intent)
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
