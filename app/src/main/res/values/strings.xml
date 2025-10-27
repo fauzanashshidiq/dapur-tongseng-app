@@ -28,4 +28,8 @@
     <string name="grid">Grid</string>
     <string name="text_selamat_datang">Selamat Datang di Dapur Tongseng!</string>
     <string name="text_slogan">Rasa Khas, Bumbu Meresap.</string>
+    <string name="tittle_join_now">Mulai Sekarang</string>
+    <string name="desc_persuasive"><![CDATA[Segera cicipi kehangatan kuah khas Dapur Tongseng dan pesan menu favorit Anda!]]></string>
+    <string name="register">Daftar</string>
+    <string name="login">Masuk</string>
 </resources>
