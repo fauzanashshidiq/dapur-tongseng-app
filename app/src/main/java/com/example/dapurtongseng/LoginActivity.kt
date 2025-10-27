@@ -16,12 +16,12 @@ class LoginActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
         val loginButton = findViewById<Button>(R.id.btn_login_submit)
-        val usernameEditText = findViewById<EditText>(R.id.et_username)
+        val emailEditText = findViewById<EditText>(R.id.et_email)
         loginButton.setOnClickListener {
-            val username = usernameEditText.text.toString()
+            val email = emailEditText.text.toString()
 
             val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra("FULL_NAME", username)
+            intent.putExtra("FULL_NAME", email)
 
             startActivity(intent)
             finishAffinity()

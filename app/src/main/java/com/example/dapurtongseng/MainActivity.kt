@@ -1,6 +1,7 @@
 package com.example.dapurtongseng
 
 import android.os.Bundle
+import android.util.Log
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -21,7 +22,15 @@ private lateinit var binding: ActivityMainBinding
 
         val navView: BottomNavigationView = binding.navView
 
+        val fullName = intent.getStringExtra("FULL_NAME")
+
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
+        val bundle = Bundle().apply {
+            putString("FULL_NAME", fullName)
+        }
+        navController.navigate(R.id.navigation_home, bundle)
+
+        navController.setGraph(R.navigation.mobile_navigation, bundle)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(setOf(

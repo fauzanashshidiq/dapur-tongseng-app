@@ -1,6 +1,7 @@
 package com.example.dapurtongseng.ui.home
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -35,6 +36,14 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val fullName = arguments?.getString("FULL_NAME")
+
+        if (fullName != null && fullName.isNotEmpty()) {
+            binding.tvWelcomeName.text = "Selamat Datang, $fullName!"
+        } else {
+            binding.tvWelcomeName.text = "Selamat Datang di Dapur Tongseng!"
+        }
 
         val rvMenu: RecyclerView = binding.rvMenu
         rvMenu.setHasFixedSize(true)
