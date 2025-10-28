@@ -12,7 +12,7 @@
         android:id="@+id/nav_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#B23A48"
+        android:background="#7C6755"
         app:itemIconTint="@color/nav_item_color_state"
         app:itemTextColor="@color/nav_item_color_state"
         app:itemRippleColor="@color/white"

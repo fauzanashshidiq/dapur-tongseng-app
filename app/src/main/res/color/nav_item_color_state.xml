@@ -3,5 +3,5 @@
     <!-- Aktif  -->
     <item android:color="@color/white" android:state_checked="true" />
     <!-- Nonaktif -->
-    <item android:color="#F5D0D0" />
+    <item android:color="#D8CBB8" />
 </selector>
