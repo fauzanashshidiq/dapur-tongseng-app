@@ -43,4 +43,6 @@
     <string name="confirmation_text">Terima kasih sudah memesan! \nMohon tunggu di lokasi sampai kurir kami segera mengantarkan pesanan anda!</string>
     <string name="greeting_confirmation">Halo Pelanggan,</string>
     <string name="btn_back">Kembali Ke Halaman Utama</string>
+    <string name="start_now">Mulai Sekarang</string>
+    <string name="desc_logo">Logo Dapur Tongseng</string>
 </resources>

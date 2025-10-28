@@ -15,7 +15,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp">
+        android:padding="8dp"
+        android:background="#FFF3E0">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/img_item_photo"
@@ -35,6 +36,7 @@
             android:layout_marginEnd="8dp"
             android:textSize="16sp"
             android:textStyle="bold"
+            android:textColor="@color/text_primary"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintStart_toEndOf="@+id/img_item_photo"
             card_view:layout_constraintTop_toTopOf="@+id/img_item_photo"
@@ -47,6 +49,7 @@
             android:layout_marginTop="8dp"
             android:ellipsize="end"
             android:maxLines="5"
+            android:textColor="@color/secondary_text"
             card_view:layout_constraintBottom_toBottomOf="@+id/img_item_photo"
             card_view:layout_constraintEnd_toEndOf="@+id/tv_item_name"
             card_view:layout_constraintStart_toStartOf="@+id/tv_item_name"

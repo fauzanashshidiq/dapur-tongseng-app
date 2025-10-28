@@ -16,6 +16,7 @@
         android:text="Selamat Datang, Pelanggan!"
         android:textSize="26sp"
         android:textStyle="bold"
+        android:textColor="@color/text_primary"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -47,7 +48,8 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"
-                android:paddingLeft="5dp"/>
+                android:paddingLeft="5dp"
+                android:textColor="@color/secondary_text"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_menu"
