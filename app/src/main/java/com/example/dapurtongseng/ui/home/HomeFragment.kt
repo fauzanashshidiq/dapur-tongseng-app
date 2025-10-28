@@ -6,16 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dapurtongseng.ListMenuAdapter
 import com.example.dapurtongseng.Menu
 import com.example.dapurtongseng.OrderActivity
+import com.example.dapurtongseng.SharedViewModel
 import com.example.dapurtongseng.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
-
+    private val sharedViewModel: SharedViewModel by activityViewModels()
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
     private lateinit var homeViewModel: HomeViewModel
@@ -32,10 +34,9 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val fullName = arguments?.getString("FULL_NAME")
-        binding.tvWelcomeName.text =
-            if (!fullName.isNullOrEmpty()) "Selamat Datang, $fullName!"
-            else "Selamat Datang di Dapur Tongseng!"
+        sharedViewModel.fullName.observe(viewLifecycleOwner) { name ->
+            binding.tvWelcomeName.text = if (!name.isNullOrEmpty()) "Selamat Datang, $name!" else "Selamat Datang di Dapur Tongseng!"
+        }
 
         val rvMenu: RecyclerView = binding.rvMenu
         rvMenu.layoutManager = LinearLayoutManager(context)

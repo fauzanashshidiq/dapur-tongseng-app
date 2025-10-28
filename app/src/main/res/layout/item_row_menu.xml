@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="8dp"
-        android:background="#FFF3E0">
+        android:background="#FAF5EE">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/img_item_photo"

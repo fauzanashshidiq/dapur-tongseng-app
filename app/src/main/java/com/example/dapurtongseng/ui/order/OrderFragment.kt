@@ -6,12 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
+import com.example.dapurtongseng.R
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dapurtongseng.databinding.FragmentOrderBinding
-import com.example.dapurtongseng.ui.dashboard.OrderViewModel
+import com.example.dapurtongseng.SharedViewModel
 
 class OrderFragment : Fragment() {
-
+    private val sharedViewModel: SharedViewModel by activityViewModels()
 private var _binding: FragmentOrderBinding? = null
   // This property is only valid between onCreateView and
   // onDestroyView.
@@ -28,11 +32,15 @@ private var _binding: FragmentOrderBinding? = null
     _binding = FragmentOrderBinding.inflate(inflater, container, false)
     val root: View = binding.root
 
-    val textView: TextView = binding.textOrder
-    orderViewModel.text.observe(viewLifecycleOwner) {
-      textView.text = it
-    }
-    return root
+      sharedViewModel.fullName.observe(viewLifecycleOwner) { name ->
+          binding.tvOrderGreeting.text = if (!name.isNullOrEmpty()) "Halo, $name!" else "Halo, Pelanggan!"
+      }
+
+      binding.btnAddOrder.setOnClickListener {
+          findNavController().navigate(R.id.navigation_home)
+      }
+
+      return root
   }
 
 override fun onDestroyView() {
