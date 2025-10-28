@@ -10,18 +10,35 @@
         <item>Tongseng Kambing Spesial</item>
         <item>Tongseng Ayam Santan</item>
         <item>Tongseng Telur Puyuh (Vegetarian)</item>
+        <item>Tongseng Seafood Pedas</item>
+        <item>Tongseng Jamur Pedas Manis</item>
+        <item>Tongseng Iga Sapi</item>
+        <item>Tongseng Bebek Rica-rica</item>
+        <item>Tongseng Ati Ampela Pedas</item>
     </string-array>
     <string-array name="data_description">
         <item>Daging sapi empuk, kuah kental manis-pedas khas.</item>
         <item>Daging kambing muda, tanpa bau prengus, bumbu meresap.</item>
         <item>Versi lebih ringan dengan daging ayam, kuah lebih santan.</item>
         <item>Tongseng dengan telur puyuh, sayuran, dan jamur (opsi non-daging).</item>
+        <item>Paduan udang, cumi, dan kuah tongseng ekstra cabai.</item>
+        <item>Pilihan vegan/vegetarian dengan aneka jamur dan cabai rawit.</item>
+        <item>Iga sapi utuh yang empuk dimasak dengan kuah tongseng kental.</item>
+        <item>Nasi goreng dimasak dengan bumbu tongseng, irisan daging, dan kol.</item>
+        <item>Daging bebek lembut dengan bumbu rica-rica pedas khas.</item>
+        <item>Ati ampela dimasak dengan bumbu tongseng pedas gurih.</item>
     </string-array>
     <string-array name="data_photo">
         <item>tongseng_sapi_klasik.jpg</item>
         <item>tongseng_kambing_spesial.jpg</item>
         <item>tongseng_ayam_santan.jpg</item>
         <item>tongseng_telur_puyuh.jpg</item>
+        <item>tongseng_seafood_pedas.jpg</item>
+        <item>tongseng_jamur_pedas.jpg</item>
+        <item>tongseng_iga_sapi.jpg</item>
+        <item>nasi_goreng_tongseng.jpg</item>
+        <item>tongseng_bebek_rica.jpg</item>
+        <item>tongseng_ati_ampela.jpg</item>
     </string-array>
 
     <string name="list">List</string>
