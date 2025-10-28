@@ -14,6 +14,7 @@ class OrderActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_order)
+        supportActionBar?.hide()
 
         val ivMenuPhoto: ImageView = findViewById(R.id.ivMenuPhoto)
         val tvMenuName: TextView = findViewById(R.id.tvMenuName)
