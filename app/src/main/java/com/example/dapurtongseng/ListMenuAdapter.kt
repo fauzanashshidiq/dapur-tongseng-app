@@ -56,4 +56,10 @@ class ListMenuAdapter(private val listMenu: ArrayList<Menu>) : RecyclerView.Adap
     interface OnItemClickCallback {
         fun onItemClicked(data: Menu)
     }
+
+    fun updateData(newList: List<Menu>) {
+        listMenu.clear()
+        listMenu.addAll(newList)
+        notifyDataSetChanged()
+    }
 }
