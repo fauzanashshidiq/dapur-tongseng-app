@@ -19,7 +19,7 @@ class AlamatActivity : AppCompatActivity() {
         val fullNameEditText = findViewById<EditText>(R.id.et_full_name)
         alamatButton.setOnClickListener {
             val fullName = fullNameEditText.text.toString()
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, ConfirmationActivity::class.java)
 
             intent.putExtra("FULL_NAME", fullName)
 
