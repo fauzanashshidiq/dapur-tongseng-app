@@ -1,6 +1,9 @@
 package com.example.dapurtongseng
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -22,7 +25,11 @@ class OrderActivity : AppCompatActivity() {
         val menuDesc = intent.getStringExtra("MENU_DESC")
         val photoName = intent.getStringExtra("MENU_PHOTO")
 
-        tvOrderTitle.text = "Pesanan oleh $fullName"
+        if (fullName != null && fullName.isNotEmpty()) {
+            tvOrderTitle.text = "Pesanan oleh $fullName"
+        } else {
+            tvOrderTitle.text = "Pesanan saya"
+        }
         tvMenuName.text = menuName
         tvMenuDesc.text = menuDesc
 
@@ -35,5 +42,11 @@ class OrderActivity : AppCompatActivity() {
         Glide.with(this)
             .load(imageResId)
             .into(ivMenuPhoto)
+
+        val kirimButton = findViewById<Button>(R.id.btn_kirim)
+        kirimButton.setOnClickListener {
+            val intent = Intent(this, AlamatActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

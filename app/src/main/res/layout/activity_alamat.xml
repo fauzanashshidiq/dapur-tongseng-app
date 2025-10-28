@@ -5,14 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    tools:context=".AlamatActivity">
 
     <TextView
-        android:id="@+id/tv_register_title"
+        android:id="@+id/tv_alamat_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:text="@string/register"
+        android:text="@string/title_alamat"
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,16 +31,16 @@
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_register_title" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_alamat_title" />
 
     <EditText
-        android:id="@+id/et_email_reg"
+        android:id="@+id/et_alamat"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
-        android:hint="@string/email"
+        android:hint="@string/alamat"
         android:inputType="text"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,33 +48,33 @@
         app:layout_constraintTop_toBottomOf="@+id/et_full_name" />
 
     <EditText
-        android:id="@+id/et_password_reg"
+        android:id="@+id/et_detail_alamat"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
-        android:hint="@string/password"
+        android:hint="@string/detail_alamat"
         android:inputType="textPassword"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_email_reg" />
+        app:layout_constraintTop_toBottomOf="@+id/et_alamat" />
 
     <Button
-        android:id="@+id/btn_register_submit"
+        android:id="@+id/btn_send_submit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:paddingVertical="16dp"
-        android:text="@string/register"
+        android:text="@string/btn_send_order"
         android:textAllCaps="false"
         app:backgroundTint="@null"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_password_reg" />
+        app:layout_constraintTop_toBottomOf="@+id/et_detail_alamat" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
