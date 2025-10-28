@@ -28,9 +28,8 @@ private lateinit var binding: ActivityMainBinding
         val bundle = Bundle().apply {
             putString("FULL_NAME", fullName)
         }
-        navController.navigate(R.id.navigation_home, bundle)
-
         navController.setGraph(R.navigation.mobile_navigation, bundle)
+        navController.navigate(R.id.navigation_home, bundle)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(setOf(

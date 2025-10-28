@@ -29,7 +29,10 @@ class ConfirmationActivity : AppCompatActivity() {
         val backButton = findViewById<Button>(R.id.btn_back_to_menu)
         backButton.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("FULL_NAME", fullName)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
             startActivity(intent)
+            finish()
         }
     }
 }
