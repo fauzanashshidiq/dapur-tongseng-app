@@ -16,6 +16,7 @@ class ConfirmationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_confirmation)
 
+        supportActionBar?.hide()
         val tvNameConfirmation: TextView = findViewById(R.id.tv_halo_name_confirmation)
         val fullName = intent.getStringExtra("FULL_NAME")
 
