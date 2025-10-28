@@ -16,14 +16,14 @@
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.dapurtongseng.ui.dashboard.DashboardFragment"
+        android:id="@+id/navigation_order"
+        android:name="com.example.dapurtongseng.ui.order.OrderFragment"
         android:label="@string/title_order"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_order" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.dapurtongseng.ui.notifications.NotificationsFragment"
+        android:id="@+id/navigation_profile"
+        android:name="com.example.dapurtongseng.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_profile" />
 </navigation>
