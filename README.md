@@ -39,6 +39,6 @@ Aplikasi **Dapur Tongseng** adalah aplikasi pemesanan makanan tongseng berbasis 
 1. Buka **Android Studio**.
 2. Clone repository ini:
    ```
-   git clone https://github.com/fauzanashshidiq/dapur-tongseng-app.git
+   https://github.com/fauzanashshidiq/dapur-tongseng-app.git
    ```
 3. Jalankan aplikasi menggunakan **Emulator** atau **Device fisik**.
